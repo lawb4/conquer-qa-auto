@@ -37,6 +37,7 @@ public class Tasks {
         String str = String.valueOf(a); // get String value of int a
         char charLastDigit = str.charAt(str.length() - 1); // get value from the last index (digit) of str and assign it to char
         int intLastDigit = Character.getNumericValue(charLastDigit); // get numeric value of char which contains the last index (digit)
+
         return intLastDigit == 5; // check if the numeric value of last digit = 5
     }
 
@@ -54,6 +55,7 @@ public class Tasks {
             // Get Integer value of every character (digit) of the number-String
             sum += Character.getNumericValue(strDigits.charAt(i));
         }
+
         return sum % 2 == 0;
     }
 
@@ -135,6 +137,7 @@ public class Tasks {
         String stringValueOfNum = String.valueOf(a);
         // create a new variable with a reversed value of the number-string `stringValueOfNum`
         String stringValueOfNumReversed = new StringBuilder(stringValueOfNum).reverse().toString();
+
         return stringValueOfNum.equals(stringValueOfNumReversed);
     }
 
@@ -147,7 +150,9 @@ public class Tasks {
             return a + b;
         } else if (a % 3 == 0 || b % 3 == 0) {
             return b * b;
-        } else return null; // Integer is a wrapper class of int, so it can hold null
+        } else {
+            return null; // Integer is a wrapper class of int, so it can hold null
+        }
     }
 
     /**
@@ -155,7 +160,6 @@ public class Tasks {
      * Напишите функцию, которая принимает возраст и возвращает категорию: Child (до 12 лет), Teenager (от 13 до 17 лет), Adult (от 18 до 64 лет) или Senior (от 65 лет и старше)
      */
     public static String getAgeCategory(int age) {
-
         if (age > 0 && age <= 12) {
             return "Child";
         } else if (age >= 13 && age <= 17) {
