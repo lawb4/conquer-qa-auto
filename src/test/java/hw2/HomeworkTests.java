@@ -182,4 +182,13 @@ public class HomeworkTests {
         assertEquals(getAgeCategory(0), "Invalid age");
         assertEquals(getAgeCategory(-1), "Invalid age");
     }
+
+    @Test
+    public void testIsDivisibleWithResidualValue() {
+        assertTrue(isDivisibleWithResidualValue(8, 3)); //2
+        assertTrue(isDivisibleWithResidualValue(11, 3)); //2
+
+        assertFalse(isDivisibleWithResidualValue(7, 3)); //1
+        assertFalse(isDivisibleWithResidualValue(14, 5)); //4
+    }
 }

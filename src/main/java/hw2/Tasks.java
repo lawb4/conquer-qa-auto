@@ -168,4 +168,12 @@ public class Tasks {
             return "Invalid age";
         }
     }
+
+    /**
+     * Проверка на делимость с остальным значением
+     * Создайте функцию, которая принимает два числа и проверяет, делится ли первое число на второе с остатком равным 2. Верните true, если делится с остатком 2, и false — если нет.
+     */
+    public static boolean isDivisibleWithResidualValue(int a, int b) {
+        return a % b == 2;
+    }
 }
