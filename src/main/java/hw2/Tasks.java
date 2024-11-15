@@ -137,4 +137,16 @@ public class Tasks {
         String stringValueOfNumReversed = new StringBuilder(stringValueOfNum).reverse().toString();
         return stringValueOfNum.equals(stringValueOfNumReversed);
     }
+
+    /**
+     * Кратность чисел и их сумма
+     * Реализуйте функцию, которая принимает два числа. Если оба числа кратны 3, верните их сумму; если одно из них кратно 3, верните удвоенное значение второго числа; если ни одно не кратно 3, верните null
+     */
+    public static Integer getSumOrMultiplication(int a, int b) {
+        if (a % 3 == 0 && b % 3 == 0) {
+            return a + b;
+        } else if (a % 3 == 0 || b % 3 == 0) {
+            return b * b;
+        } else return null; // Integer is a wrapper class of int, so it can hold null
+    }
 }

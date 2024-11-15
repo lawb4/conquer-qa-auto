@@ -145,4 +145,18 @@ public class HomeworkTests {
         assertFalse(isPalindrome(-12321));
         assertFalse(isPalindrome(-1));
     }
+
+    @Test
+    public void testGetSumOrMultiplication() {
+        assertEquals(getSumOrMultiplication(3, 9), 12);
+        assertEquals(getSumOrMultiplication(3, 10), 100);
+        assertEquals(getSumOrMultiplication(-9, 3), -6);
+        assertEquals(getSumOrMultiplication(12, -4), 16);
+        assertEquals(getSumOrMultiplication(10, 3), 9);
+        assertNull(getSumOrMultiplication(2, 4));
+
+        assertEquals(getSumOrMultiplication(0, 0), 0);
+        assertEquals(getSumOrMultiplication(0, 5), 25);
+        assertEquals(getSumOrMultiplication(7, 0), 0);
+    }
 }
