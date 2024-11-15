@@ -98,6 +98,18 @@ public class HomeworkTests {
     }
 
     @Test
+    public void testIsNumberMultipleOfFourAndSix() {
+        assertTrue(isNumberMultipleOfFourAndSix(24));
+        assertTrue(isNumberMultipleOfFourAndSix(-48));
+        assertTrue(isNumberMultipleOfFourAndSix(0));
+
+        assertFalse(isNumberMultipleOfFourAndSix(4));
+        assertFalse(isNumberMultipleOfFourAndSix(6));
+        assertFalse(isNumberMultipleOfFourAndSix(-44));
+        assertFalse(isNumberMultipleOfFourAndSix(-66));
+    }
+
+    @Test
     public void testGetTheBiggestNumberOutOfThree() {
         assertEquals(getTheBiggestNumberOutOfThree(3, 2, 1), 3);
         assertEquals(getTheBiggestNumberOutOfThree(20, 789, 7), 789);
