@@ -110,6 +110,19 @@ public class HomeworkTests {
     }
 
     @Test
+    public void testGetSumOfTwoIsEvenAndDivisibleByTen() {
+        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(6, 4), "Even and Divisible by 10");
+        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(-12, -8), "Even and Divisible by 10");
+        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(0, 0), "Even and Divisible by 10");
+
+        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(2, 2), "Even but not Divisible by 10");
+        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(-5, -1), "Even but not Divisible by 10");
+
+        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(6, 3), "Odd");
+        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(-4, -3), "Odd");
+    }
+
+    @Test
     public void testGetTheBiggestNumberOutOfThree() {
         assertEquals(getTheBiggestNumberOutOfThree(3, 2, 1), 3);
         assertEquals(getTheBiggestNumberOutOfThree(20, 789, 7), 789);

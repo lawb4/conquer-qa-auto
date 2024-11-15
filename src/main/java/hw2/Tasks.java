@@ -98,6 +98,19 @@ public class Tasks {
     }
 
     /**
+     * Проверка суммы на чётность и кратность 10
+     * Реализуйте функцию, которая принимает два числа и возвращает "Even and Divisible by 10", если сумма чётная и делится на 10, "Even but not Divisible by 10", если сумма чётная, но не делится на 10, и "Odd", если сумма нечётная
+     */
+    public static String getSumOfTwoIsEvenAndDivisibleByTen(int a, int b) {
+        boolean isEvenAndDivisible = (a + b) % 2 == 0 && (a + b) % 10 == 0;
+        boolean isEvenButNotDivisible = (a + b) % 2 == 0 && (a + b) % 10 != 0;
+
+        return isEvenAndDivisible ? "Even and Divisible by 10"
+                : isEvenButNotDivisible ? "Even but not Divisible by 10"
+                : "Odd";
+    }
+
+    /**
      * TODO тут 3 задачи я пока пропустил
      */
 
