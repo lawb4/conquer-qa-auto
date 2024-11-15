@@ -159,4 +159,27 @@ public class HomeworkTests {
         assertEquals(getSumOrMultiplication(0, 5), 25);
         assertEquals(getSumOrMultiplication(7, 0), 0);
     }
+
+    @Test
+    public void testGetAgeCategory() {
+        assertEquals(getAgeCategory(1), "Child");
+        assertEquals(getAgeCategory(11), "Child");
+        assertEquals(getAgeCategory(12), "Child");
+
+        assertEquals(getAgeCategory(13), "Teenager");
+        assertEquals(getAgeCategory(14), "Teenager");
+        assertEquals(getAgeCategory(16), "Teenager");
+        assertEquals(getAgeCategory(17), "Teenager");
+
+        assertEquals(getAgeCategory(18), "Adult");
+        assertEquals(getAgeCategory(19), "Adult");
+        assertEquals(getAgeCategory(63), "Adult");
+        assertEquals(getAgeCategory(64), "Adult");
+
+        assertEquals(getAgeCategory(65), "Senior");
+        assertEquals(getAgeCategory(66), "Senior");
+
+        assertEquals(getAgeCategory(0), "Invalid age");
+        assertEquals(getAgeCategory(-1), "Invalid age");
+    }
 }

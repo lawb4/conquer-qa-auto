@@ -149,4 +149,23 @@ public class Tasks {
             return b * b;
         } else return null; // Integer is a wrapper class of int, so it can hold null
     }
+
+    /**
+     * Проверка возраста на категорию
+     * Напишите функцию, которая принимает возраст и возвращает категорию: Child (до 12 лет), Teenager (от 13 до 17 лет), Adult (от 18 до 64 лет) или Senior (от 65 лет и старше)
+     */
+    public static String getAgeCategory(int age) {
+
+        if (age > 0 && age <= 12) {
+            return "Child";
+        } else if (age >= 13 && age <= 17) {
+            return "Teenager";
+        } else if (age >= 18 && age <= 64) {
+            return "Adult";
+        } else if (age >= 65) {
+            return "Senior";
+        } else {
+            return "Invalid age";
+        }
+    }
 }
