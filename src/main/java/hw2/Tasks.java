@@ -111,10 +111,6 @@ public class Tasks {
     }
 
     /**
-     * TODO тут 3 задачи я пока пропустил
-     */
-
-    /**
      * Максимум трёх чисел
      * Напишите функцию, которая принимает три числа и возвращает наибольшее из них
      */
@@ -127,5 +123,18 @@ public class Tasks {
 //            return c;
 //        }
         return Math.max(a, Math.max(b, c));
+    }
+
+    /**
+     * Проверка на палиндромность числа
+     * Создайте функцию, которая принимает целое число и проверяет, является ли оно палиндромом (например, 121 или 12321). Верните true, если да, и false, если нет
+     */
+    public static boolean isPalindrome(int a) {
+        if (a < 0) return false; // Negative numbers are not considered palindromes
+
+        String stringValueOfNum = String.valueOf(a);
+        // create a new variable with a reversed value of the number-string `stringValueOfNum`
+        String stringValueOfNumReversed = new StringBuilder(stringValueOfNum).reverse().toString();
+        return stringValueOfNum.equals(stringValueOfNumReversed);
     }
 }

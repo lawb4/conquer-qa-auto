@@ -133,4 +133,16 @@ public class HomeworkTests {
         assertEquals(getTheBiggestNumberOutOfThree(150, 70, 150), 150);
         assertEquals(getTheBiggestNumberOutOfThree(300, 300, 300), 300);
     }
+
+    @Test
+    public void testIsPalindrome() {
+        assertTrue(isPalindrome(11));
+        assertTrue(isPalindrome(121));
+        assertTrue(isPalindrome(12321));
+        assertTrue(isPalindrome(0));
+
+        assertFalse(isPalindrome(123));
+        assertFalse(isPalindrome(-12321));
+        assertFalse(isPalindrome(-1));
+    }
 }
