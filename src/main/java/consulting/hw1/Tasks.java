@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:src/main/java/consulting/hw1/Tasks.java
 package consulting.hw1;
-========
-package hw1;
->>>>>>>> f8ec905ab309e8896667722d0abf98294cb25872:src/main/java/hw1/Tasks.java
 
 /**
  * Список задач после видео со второй консультацией
