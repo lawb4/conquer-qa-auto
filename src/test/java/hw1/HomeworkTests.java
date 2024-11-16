@@ -1,8 +1,8 @@
-package hw2;
+package hw1;
 
 import org.junit.jupiter.api.Test;
 
-import static hw2.Tasks.*;
+import static hw1.Tasks.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class HomeworkTests {
