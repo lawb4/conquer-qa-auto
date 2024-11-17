@@ -81,11 +81,12 @@ public class Main {
 
         Triangle triangle = new Triangle(2.23d, 3.34d, 4.67d);
         triangle.printTriangleInfo();
-        /**
-         * Метод calculatePerimeter(), который возвращает периметр треугольника.
-         * Метод calculateArea(), который возвращает площадь треугольника по формуле Герона.
-         * Метод printTriangleInfo(), который выводит стороны, периметр и площадь.
-         * В методе main создайте объект треугольника и выведите его данные.
-         */
+
+        System.out.println("\n\n=== Task 10 Player ===");
+
+        Player player = new Player("N@G18aToR", 99, 101);
+        player.levelUp();
+        player.addScore(199);
+        player.printPlayerInfo();
     }
 }
