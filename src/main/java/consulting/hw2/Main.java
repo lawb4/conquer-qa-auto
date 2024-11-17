@@ -21,5 +21,12 @@ public class Main {
         person1.printInfo();
         person2.printInfo();
         person3.printInfo();
+
+        System.out.println("\n\n=== Task 3 Car ===");
+
+        Car car = new Car("Tesla", "Model Y", 2024);
+        car.setPrice(51490d);
+
+        car.printCarInfo();
     }
 }

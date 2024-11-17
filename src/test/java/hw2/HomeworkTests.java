@@ -1,6 +1,7 @@
 package hw2;
 
 import consulting.hw2.Book;
+import consulting.hw2.Car;
 import consulting.hw2.Person;
 import org.junit.jupiter.api.Test;
 
@@ -39,5 +40,22 @@ public class HomeworkTests {
         assertEquals(person1Info, "Имя: null, Возраст: 0, Пол: null");
         assertEquals(person2Info, "Имя: Alien, Возраст: 987, Пол: null");
         assertEquals(person3Info, "Имя: Alexey, Возраст: 27, Пол: M");
+    }
+
+    @Test
+    public void testCarClass() {
+        Car car1 = new Car("Tesla", "Model Y", 2024);
+        car1.setPrice(51490d);
+        Car car2 = new Car("Opel", "Vectra", 2003);
+
+        String expectedPrintInfo = "Бренд: %s, Модель: %s, Год: %d, Цена: %s";
+
+        String car1info = String.format(expectedPrintInfo,
+                car1.getBrand(), car1.getModel(), car1.getYear(), car1.getPrice());
+        String car2info = String.format(expectedPrintInfo,
+                car2.getBrand(), car2.getModel(), car2.getYear(), car2.getPrice());
+
+        assertEquals(car1info, "Бренд: Tesla, Модель: Model Y, Год: 2024, Цена: 51490.0");
+        assertEquals(car2info, "Бренд: Opel, Модель: Vectra, Год: 2003, Цена: 0.0");
     }
 }
