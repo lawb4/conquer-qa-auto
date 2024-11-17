@@ -108,5 +108,10 @@ public class Main {
 
         Company company = new Company("OOO Beltelecom", 500, 1_000_000d);
         company.printCompanyInfo();
+
+        System.out.println("\n\n=== Task 14 Circle ===");
+
+        Circle circle = new Circle(8.32d);
+        circle.printCircleInfo();
     }
 }
