@@ -3,6 +3,7 @@ package hw2;
 import consulting.hw2.Book;
 import consulting.hw2.Car;
 import consulting.hw2.Person;
+import consulting.hw2.Product;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,5 +58,26 @@ public class HomeworkTests {
 
         assertEquals(car1info, "Бренд: Tesla, Модель: Model Y, Год: 2024, Цена: 51490.0");
         assertEquals(car2info, "Бренд: Opel, Модель: Vectra, Год: 2003, Цена: 0.0");
+    }
+
+    @Test
+    public void testProductClass() {
+        Product product1 = new Product("Course about Productivity", "Productivity", Integer.MAX_VALUE, 990.90d);
+        Product product2 = new Product("Pill for every ill", "Health", 0, Double.MAX_VALUE);
+
+        String expectedPrintInfo = "Товар: %s, Категория: %s, Количество: %d, Общая стоимость: %s";
+
+        String expectedProduct1Info = "Товар: Course about Productivity, Категория: Productivity, Количество: 2147483647, Общая стоимость: 2127941545812.30";
+        String expectedProduct2Info = "Товар: Pill for every ill, Категория: Health, Количество: 0, Общая стоимость: 0.00";
+
+        String actualProduct1info = String.format(expectedPrintInfo,
+                product1.getName(), product1.getCategory(), product1.getQuantity(), String.format("%.2f", product1.calculateTotalPrice()));
+        String actualProduct2info = String.format(expectedPrintInfo,
+                product2.getName(), product2.getCategory(), product2.getQuantity(), String.format("%.2f", product2.calculateTotalPrice()));
+
+        assertEquals(expectedProduct1Info, actualProduct1info);
+        
+        assertEquals(0, product2.getQuantity());
+        assertEquals(expectedProduct2Info, actualProduct2info);
     }
 }

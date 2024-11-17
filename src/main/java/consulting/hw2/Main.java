@@ -28,5 +28,12 @@ public class Main {
         car.setPrice(51490d);
 
         car.printCarInfo();
+
+        System.out.println("\n\n=== Task 4 Product ===");
+
+        Product product = new Product("Course about Productivity", "Productivity", Integer.MAX_VALUE, 990.90d);
+        product.setQuantity(500);
+
+        product.printProductInfo();
     }
 }
