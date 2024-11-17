@@ -55,5 +55,12 @@ public class Main {
 
         double amountToConvert = 3450.55d;
         System.out.printf("Сумма после конвертации %s BYN по курсу: %s", String.format("%.2f", amountToConvert), String.format("%.2f", currencyByn.convertToUSD(amountToConvert)));
+
+        System.out.println("\n\n=== Task 7 Phone ===");
+
+        Phone phone = new Phone("iPhone", "16 Pro Max", 1199d);
+
+        phone.applyDiscount(15);
+        phone.printPhoneDetails();
     }
 }
