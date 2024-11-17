@@ -69,9 +69,9 @@ public class HomeworkTests {
 
     @Test
     public void testGetNumberSign() {
-        assertEquals(getNumberSign(1), "Positive");
-        assertEquals(getNumberSign(-1), "Negative");
-        assertEquals(getNumberSign(0), "Zero");
+        assertEquals("Positive", getNumberSign(1));
+        assertEquals("Negative", getNumberSign(-1));
+        assertEquals("Zero", getNumberSign(0));
     }
 
     @Test
@@ -88,13 +88,13 @@ public class HomeworkTests {
 
     @Test
     public void testGetSumOfTwoIsEven() {
-        assertEquals(getSumOfTwoIsEven(2, 4), "Even");
-        assertEquals(getSumOfTwoIsEven(0, 0), "Even");
-        assertEquals(getSumOfTwoIsEven(-1, 1), "Even");
-        assertEquals(getSumOfTwoIsEven(-2, -4), "Even");
+        assertEquals("Even", getSumOfTwoIsEven(2, 4));
+        assertEquals("Even", getSumOfTwoIsEven(0, 0));
+        assertEquals("Even", getSumOfTwoIsEven(-1, 1));
+        assertEquals("Even", getSumOfTwoIsEven(-2, -4));
 
-        assertEquals(getSumOfTwoIsEven(-1, -4), "Odd");
-        assertEquals(getSumOfTwoIsEven(3, 6), "Odd");
+        assertEquals("Odd", getSumOfTwoIsEven(-1, -4));
+        assertEquals("Odd", getSumOfTwoIsEven(3, 6));
     }
 
     @Test
@@ -111,15 +111,15 @@ public class HomeworkTests {
 
     @Test
     public void testGetSumOfTwoIsEvenAndDivisibleByTen() {
-        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(6, 4), "Even and Divisible by 10");
-        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(-12, -8), "Even and Divisible by 10");
-        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(0, 0), "Even and Divisible by 10");
+        assertEquals("Even and Divisible by 10", getSumOfTwoIsEvenAndDivisibleByTen(6, 4));
+        assertEquals("Even and Divisible by 10", getSumOfTwoIsEvenAndDivisibleByTen(-12, -8));
+        assertEquals("Even and Divisible by 10", getSumOfTwoIsEvenAndDivisibleByTen(0, 0));
 
-        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(2, 2), "Even but not Divisible by 10");
-        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(-5, -1), "Even but not Divisible by 10");
+        assertEquals("Even but not Divisible by 10", getSumOfTwoIsEvenAndDivisibleByTen(2, 2));
+        assertEquals("Even but not Divisible by 10", getSumOfTwoIsEvenAndDivisibleByTen(-5, -1));
 
-        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(6, 3), "Odd");
-        assertEquals(getSumOfTwoIsEvenAndDivisibleByTen(-4, -3), "Odd");
+        assertEquals("Odd", getSumOfTwoIsEvenAndDivisibleByTen(6, 3));
+        assertEquals("Odd", getSumOfTwoIsEvenAndDivisibleByTen(-4, -3));
     }
 
     @Test
@@ -162,25 +162,25 @@ public class HomeworkTests {
 
     @Test
     public void testGetAgeCategory() {
-        assertEquals(getAgeCategory(1), "Child");
-        assertEquals(getAgeCategory(11), "Child");
-        assertEquals(getAgeCategory(12), "Child");
+        assertEquals("Child", getAgeCategory(1));
+        assertEquals("Child", getAgeCategory(11));
+        assertEquals("Child", getAgeCategory(12));
 
-        assertEquals(getAgeCategory(13), "Teenager");
-        assertEquals(getAgeCategory(14), "Teenager");
-        assertEquals(getAgeCategory(16), "Teenager");
-        assertEquals(getAgeCategory(17), "Teenager");
+        assertEquals("Teenager", getAgeCategory(13));
+        assertEquals("Teenager", getAgeCategory(14));
+        assertEquals("Teenager", getAgeCategory(16));
+        assertEquals("Teenager", getAgeCategory(17));
 
-        assertEquals(getAgeCategory(18), "Adult");
-        assertEquals(getAgeCategory(19), "Adult");
-        assertEquals(getAgeCategory(63), "Adult");
-        assertEquals(getAgeCategory(64), "Adult");
+        assertEquals("Adult", getAgeCategory(18));
+        assertEquals("Adult", getAgeCategory(19));
+        assertEquals("Adult", getAgeCategory(63));
+        assertEquals("Adult", getAgeCategory(64));
 
-        assertEquals(getAgeCategory(65), "Senior");
-        assertEquals(getAgeCategory(66), "Senior");
+        assertEquals("Senior", getAgeCategory(65));
+        assertEquals("Senior", getAgeCategory(66));
 
-        assertEquals(getAgeCategory(0), "Invalid age");
-        assertEquals(getAgeCategory(-1), "Invalid age");
+        assertEquals("Invalid age", getAgeCategory(0));
+        assertEquals("Invalid age", getAgeCategory(-1));
     }
 
     @Test

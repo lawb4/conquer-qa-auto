@@ -17,9 +17,9 @@ public class HomeworkTests {
         book1.setAuthor("Svyatoslav Kulikov");
         book1.setPrice(999d);
 
-        assertEquals(book1.getTitle(), "Software Testing. Base course");
-        assertEquals(book1.getAuthor(), "Svyatoslav Kulikov");
-        assertEquals(book1.getPrice(), 999d);
+        assertEquals("Software Testing. Base course", book1.getTitle());
+        assertEquals("Svyatoslav Kulikov", book1.getAuthor());
+        assertEquals(999d, book1.getPrice());
     }
 
     @Test
@@ -31,16 +31,20 @@ public class HomeworkTests {
 
         String expectedPrintInfo = "Имя: %s, Возраст: %d, Пол: %s";
 
-        String person1Info = String.format(expectedPrintInfo,
+        String expectedPerson1Info = "Имя: null, Возраст: 0, Пол: null";
+        String expectedPerson2Info = "Имя: Alien, Возраст: 987, Пол: null";
+        String expectedPerson3Info = "Имя: Alexey, Возраст: 27, Пол: M";
+
+        String actualPerson1Info = String.format(expectedPrintInfo,
                 person1.getName(), person1.getAge(), person1.getGender());
-        String person2Info = String.format(expectedPrintInfo,
+        String actualPerson2Info = String.format(expectedPrintInfo,
                 person2.getName(), person2.getAge(), person2.getGender());
-        String person3Info = String.format(expectedPrintInfo,
+        String actualPerson3Info = String.format(expectedPrintInfo,
                 person3.getName(), person3.getAge(), person3.getGender());
 
-        assertEquals(person1Info, "Имя: null, Возраст: 0, Пол: null");
-        assertEquals(person2Info, "Имя: Alien, Возраст: 987, Пол: null");
-        assertEquals(person3Info, "Имя: Alexey, Возраст: 27, Пол: M");
+        assertEquals(expectedPerson1Info, actualPerson1Info);
+        assertEquals(expectedPerson2Info, actualPerson2Info);
+        assertEquals(expectedPerson3Info, actualPerson3Info);
     }
 
     @Test
@@ -51,13 +55,16 @@ public class HomeworkTests {
 
         String expectedPrintInfo = "Бренд: %s, Модель: %s, Год: %d, Цена: %s";
 
-        String car1info = String.format(expectedPrintInfo,
+        String expectedCar1Info = "Бренд: Tesla, Модель: Model Y, Год: 2024, Цена: 51490.0";
+        String expectedCar2Info = "Бренд: Opel, Модель: Vectra, Год: 2003, Цена: 0.0";
+
+        String actualCar1info = String.format(expectedPrintInfo,
                 car1.getBrand(), car1.getModel(), car1.getYear(), car1.getPrice());
-        String car2info = String.format(expectedPrintInfo,
+        String actualCar2info = String.format(expectedPrintInfo,
                 car2.getBrand(), car2.getModel(), car2.getYear(), car2.getPrice());
 
-        assertEquals(car1info, "Бренд: Tesla, Модель: Model Y, Год: 2024, Цена: 51490.0");
-        assertEquals(car2info, "Бренд: Opel, Модель: Vectra, Год: 2003, Цена: 0.0");
+        assertEquals(expectedCar1Info, actualCar1info);
+        assertEquals(expectedCar2Info, actualCar2info);
     }
 
     @Test
@@ -76,7 +83,7 @@ public class HomeworkTests {
                 product2.getName(), product2.getCategory(), product2.getQuantity(), String.format("%.2f", product2.calculateTotalPrice()));
 
         assertEquals(expectedProduct1Info, actualProduct1info);
-        
+
         assertEquals(0, product2.getQuantity());
         assertEquals(expectedProduct2Info, actualProduct2info);
     }
