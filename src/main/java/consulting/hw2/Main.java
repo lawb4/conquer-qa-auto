@@ -47,5 +47,13 @@ public class Main {
         for (Student student : students) {
             student.printStudentDetails();
         }
+
+        System.out.println("\n=== Task 6 Currency ===");
+
+        Currency currencyByn = new Currency("BYN", 3.3512d);
+        currencyByn.printCurrencyInfo();
+
+        double amountToConvert = 3450.55d;
+        System.out.printf("Сумма после конвертации %s BYN по курсу: %s", String.format("%.2f", amountToConvert), String.format("%.2f", currencyByn.convertToUSD(amountToConvert)));
     }
 }
