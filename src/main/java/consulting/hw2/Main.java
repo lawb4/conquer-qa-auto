@@ -93,5 +93,15 @@ public class Main {
 
         Rectangle rectangle = new Rectangle(3.14d, 7.18d);
         rectangle.printRectangleInfo();
+
+        System.out.println("\n\n=== Task 12 Customer ===");
+
+        Customer customer = new Customer("Viktor", "viktor1978@mailinator.com");
+
+        customer.addPurchase("Гель для душа");
+        customer.addPurchase("Т-образная бритва");
+        customer.addPurchase("Пена для бритья");
+
+        customer.printPurchaseHistory();
     }
 }
