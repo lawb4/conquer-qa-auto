@@ -103,5 +103,10 @@ public class Main {
         customer.addPurchase("Пена для бритья");
 
         customer.printPurchaseHistory();
+
+        System.out.println("\n\n=== Task 13 Company ===");
+
+        Company company = new Company("OOO Beltelecom", 500, 1_000_000d);
+        company.printCompanyInfo();
     }
 }
