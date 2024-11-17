@@ -62,5 +62,19 @@ public class Main {
 
         phone.applyDiscount(15);
         phone.printPhoneDetails();
+
+        System.out.println("\n\n=== Task 8 Employee ===");
+        
+        Employee employee1 = new Employee("Max", "Junior QA Engineer", 400d);
+        Employee employee2 = new Employee("Victoriya", "Middle QA Engineer", 700d);
+        Employee employee3 = new Employee("Vadim", "Senior QA Engineer", 2000d);
+
+        employee1.increaseSalary(50d);
+        employee2.increaseSalary(30d);
+        employee3.increaseSalary(10d);
+
+        employee1.printEmployeeInfo();
+        employee2.printEmployeeInfo();
+        employee3.printEmployeeInfo();
     }
 }
