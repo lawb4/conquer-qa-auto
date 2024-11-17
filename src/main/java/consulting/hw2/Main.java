@@ -88,5 +88,10 @@ public class Main {
         player.levelUp();
         player.addScore(199);
         player.printPlayerInfo();
+
+        System.out.println("\n\n=== Task 11 Rectangle ===");
+
+        Rectangle rectangle = new Rectangle(3.14d, 7.18d);
+        rectangle.printRectangleInfo();
     }
 }
