@@ -22,18 +22,30 @@ public class Main {
         person2.printInfo();
         person3.printInfo();
 
-        System.out.println("\n\n=== Task 3 Car ===");
+        System.out.println("\n=== Task 3 Car ===");
 
         Car car = new Car("Tesla", "Model Y", 2024);
         car.setPrice(51490d);
 
         car.printCarInfo();
 
-        System.out.println("\n\n=== Task 4 Product ===");
+        System.out.println("\n=== Task 4 Product ===");
 
         Product product = new Product("Course about Productivity", "Productivity", Integer.MAX_VALUE, 990.90d);
         product.setQuantity(500);
 
         product.printProductInfo();
+
+        System.out.println("\n=== Task 5 Student ===");
+
+        Student[] students = {
+                new Student("Viktor", 1, 3.3d),
+                new Student("Margaret", 2, 4.0d),
+                new Student("John", 3, 3.7d),
+        };
+
+        for (Student student : students) {
+            student.printStudentDetails();
+        }
     }
 }
