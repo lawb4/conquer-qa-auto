@@ -1,9 +1,9 @@
 package hw2;
 
-import consulting.hw2.Book;
-import consulting.hw2.Car;
-import consulting.hw2.Person;
-import consulting.hw2.Product;
+import consulting.hw2.classes.Book;
+import consulting.hw2.classes.Car;
+import consulting.hw2.classes.Person;
+import consulting.hw2.classes.Product;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

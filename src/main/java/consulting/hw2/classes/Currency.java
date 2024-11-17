@@ -1,4 +1,4 @@
-package consulting.hw2;
+package consulting.hw2.classes;
 
 public class Currency {
     private String name;

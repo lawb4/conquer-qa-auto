@@ -1,4 +1,4 @@
-package consulting.hw2;
+package consulting.hw2.classes;
 
 public class Car {
     private String brand;
