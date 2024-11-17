@@ -63,8 +63,8 @@ public class Main {
         phone.applyDiscount(15);
         phone.printPhoneDetails();
 
-        System.out.println("\n\n=== Task 8 Employee ===");
-        
+        System.out.println("\n=== Task 8 Employee ===");
+
         Employee employee1 = new Employee("Max", "Junior QA Engineer", 400d);
         Employee employee2 = new Employee("Victoriya", "Middle QA Engineer", 700d);
         Employee employee3 = new Employee("Vadim", "Senior QA Engineer", 2000d);
@@ -76,5 +76,16 @@ public class Main {
         employee1.printEmployeeInfo();
         employee2.printEmployeeInfo();
         employee3.printEmployeeInfo();
+
+        System.out.println("\n=== Task 9 Triangle ===");
+
+        Triangle triangle = new Triangle(2.23d, 3.34d, 4.67d);
+        triangle.printTriangleInfo();
+        /**
+         * Метод calculatePerimeter(), который возвращает периметр треугольника.
+         * Метод calculateArea(), который возвращает площадь треугольника по формуле Герона.
+         * Метод printTriangleInfo(), который выводит стороны, периметр и площадь.
+         * В методе main создайте объект треугольника и выведите его данные.
+         */
     }
 }
