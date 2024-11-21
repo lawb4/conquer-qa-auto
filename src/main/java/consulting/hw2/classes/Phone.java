@@ -44,7 +44,7 @@ public class Phone {
     }
 
     public void printPhoneDetails() {
-        System.out.printf("Телефон: %s %s, Цена: %s\n",
-                this.brand, this.model, String.format("%.2f", this.price));
+        System.out.printf("Телефон: %s %s, Цена: %.2f\n",
+                this.brand, this.model, this.price);
     }
 }

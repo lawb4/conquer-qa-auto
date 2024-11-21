@@ -30,7 +30,7 @@ public class Currency {
     }
 
     public void printCurrencyInfo() {
-        System.out.printf("Валюта: %s, Курс к USD: %s\n",
-                this.name, String.format("%.4f", this.rateToUSD));
+        System.out.printf("Валюта: %s, Курс к USD: %.4f\n",
+                this.name, this.rateToUSD);
     }
 }

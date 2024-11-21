@@ -50,7 +50,7 @@ public class Product {
     }
 
     public void printProductInfo() {
-        System.out.printf("Товар: %s, Категория: %s, Количество: %d, Общая стоимость: %s \n",
-                this.name, this.category, this.quantity, String.format("%.2f", this.calculateTotalPrice()));
+        System.out.printf("Товар: %s, Категория: %s, Количество: %d, Общая стоимость: %.2f \n",
+                this.name, this.category, this.quantity, this.calculateTotalPrice());
     }
 }

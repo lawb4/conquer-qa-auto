@@ -16,9 +16,9 @@ public class Circle {
     }
 
     public void printCircleInfo() {
-        System.out.printf("Радиус = %s, Площадь = %s, Длина окружности = %s",
-                String.format("%.2f", this.radius),
-                String.format("%.2f", this.calculateArea()),
-                String.format("%.2f", this.calculateCircumference()));
+        System.out.printf("Радиус = %.2f, Площадь = %.2f, Длина окружности = %.2f",
+                this.radius,
+                this.calculateArea(),
+                this.calculateCircumference());
     }
 }

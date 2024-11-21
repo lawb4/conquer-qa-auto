@@ -34,10 +34,6 @@ public class Rectangle {
     }
 
     public void printRectangleInfo() {
-        System.out.printf("Прямоугольник: Ширина = %s, Высота = %s, Площадь = %s, Периметр = %s",
-                String.format("%.2f", this.width),
-                String.format("%.2f", this.height),
-                String.format("%.2f", this.calculateArea()),
-                String.format("%.2f", this.calculatePerimeter()));
+        System.out.printf("Прямоугольник: Ширина = %.2f, Высота = %.2f, Площадь = %.2f, Периметр = %.2f", this.width, this.height, this.calculateArea(), this.calculatePerimeter());
     }
 }

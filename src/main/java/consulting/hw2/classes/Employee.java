@@ -40,7 +40,7 @@ public class Employee {
     }
 
     public void printEmployeeInfo() {
-        System.out.printf("Сотрудник: %s, Должность: %s, Зарплата: %s\n",
-                this.name, this.position, String.format("%.0f", this.salary));
+        System.out.printf("Сотрудник: %s, Должность: %s, Зарплата: %.0f\n",
+                this.name, this.position, this.salary);
     }
 }

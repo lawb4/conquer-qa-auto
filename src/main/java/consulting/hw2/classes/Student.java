@@ -36,7 +36,7 @@ public class Student {
     }
 
     public void printStudentDetails() {
-        System.out.printf("Студент: %s, ID: %s, GPA: %s\n",
-                this.name, this.studentId, String.format("%.1f", this.gpa));
+        System.out.printf("Студент: %s, ID: %s, GPA: %.1f\n",
+                this.name, this.studentId, this.gpa);
     }
 }

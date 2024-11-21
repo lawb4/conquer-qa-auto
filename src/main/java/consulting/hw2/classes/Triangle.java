@@ -45,11 +45,6 @@ public class Triangle {
     }
 
     public void printTriangleInfo() {
-        System.out.printf("Стороны: %s, %s, %s;\nПериметр: %s;\nПлощадь: %s",
-                String.format("%.2f", this.a),
-                String.format("%.2f", this.b),
-                String.format("%.2f", this.c),
-                String.format("%.4f", this.calculatePerimeter()),
-                String.format("%.4f", this.calculateArea()));
+        System.out.printf("Стороны: %.2f, %.2f, %.2f;\nПериметр: %.2f;\nПлощадь: %.2f", this.a, this.b, this.c, this.calculatePerimeter(), this.calculateArea());
     }
 }

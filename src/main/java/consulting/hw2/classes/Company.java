@@ -36,6 +36,6 @@ public class Company {
     }
 
     public void printCompanyInfo() {
-        System.out.printf("Компания: %s, Сотрудников: %d, Доход: %s", this.name, this.employees, String.format("%.2f", this.revenue));
+        System.out.printf("Компания: %s, Сотрудников: %d, Доход: %.2f", this.name, this.employees, this.revenue);
     }
 }

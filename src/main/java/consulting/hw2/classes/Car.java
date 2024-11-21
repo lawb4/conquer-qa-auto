@@ -33,7 +33,7 @@ public class Car {
     }
 
     public void printCarInfo() {
-        System.out.printf("Бренд: %s, Модель: %s, Год: %d, Цена: %s \n",
-                this.brand, this.model, this.year, String.format("%.3f", this.price));
+        System.out.printf("Бренд: %s, Модель: %s, Год: %d, Цена: %.2f \n",
+                this.brand, this.model, this.year, this.price);
     }
 }
