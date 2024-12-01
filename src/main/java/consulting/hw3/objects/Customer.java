@@ -1,33 +1,57 @@
 package consulting.hw3.objects;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.UUID;
 
 public class Customer {
-    private String id;
+    private final String id;
     private String name;
     private Cart cart;
-    private Order order;
+    private HashSet<Order> orders;
 
-    public Customer(String
-                            id, String name, Cart cart) {
-        this.id = id;
+    public Customer(String name) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
-        this.cart = new Cart(this, new HashSet<>());
+        this.cart = new Cart(this);
+        this.orders = new HashSet<>();
     }
 
-    public void addItem(Item item) {
-        cart.getItems().add(item);
+    public Cart getCart() {
+        return cart;
     }
 
-    public void removeItem(Item item) {
-        cart.getItems().remove(item);
+    public void addItem(Item item, int quantity) {
+        cart.addItem(item, quantity);
     }
 
-    public Order createOrder(Cart cart) {
-        return new Order(cart);
+    public void removeItem(Item item, int quantity) {
+        cart.removeItem(item, quantity);
     }
 
-    public void pay(Cart cart) {
+    public Order createOrder() {
+        Order order = new Order(this, new HashMap<>(cart.getItems()));
+        orders.add(order);
+        cart.clearCart();
+        return order;
+    }
 
+    public void payOrder(Order order) {
+        order.setStatus(OrderStatus.PAID);
+    }
+
+    public void printCartItems() {
+        for (Map.Entry<Item, Integer> item : this.getCart().getItems().entrySet()) {
+            System.out.println(item);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
