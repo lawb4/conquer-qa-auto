@@ -42,7 +42,7 @@ public class Customer {
     }
 
     public void printCartItems() {
-        for (Map.Entry<Item, Integer> item : this.getCart().getItems().entrySet()) {
+        for (Map.Entry<Item, Integer> item : cart.getItems().entrySet()) {
             System.out.println(item);
         }
     }
